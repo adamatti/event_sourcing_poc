@@ -1,1 +1,7 @@
 Pet project exchanging events between a node and groovy module
+
+#### Todo
+* Create some events and aggregate them
+
+#### Issues
+* need to find why groovy/camel still creating ghost queues
