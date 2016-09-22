@@ -1,0 +1,6 @@
+# http://editorconfig.org
+root = true
+
+[*.{groovy,gradle}]
+indent_style = tab
+indent_size = 4

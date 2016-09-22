@@ -1,0 +1,23 @@
+{
+  "name": "node_app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "configMq": "node ./app/build_tasks/configMq.js",
+    "start": "node app/index.js"
+  },
+  "author": "Marcelo Adamatti",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.4.2",
+    "bluebird": "^3.4.6",
+    "caller-id": "^0.1.0",
+    "express": "^4.14.0",
+    "lodash": "^4.16.0",
+    "log4js": "^0.6.38",
+    "sleep": "^4.0.0",
+    "string": "^3.3.1",
+    "uuid-v4": "^0.1.0"
+  }
+}

@@ -1,0 +1,27 @@
+mq:
+  log_driver: "none"
+  image: rabbitmq:3.5.6-management
+  expose:
+    - "5672"
+  environment:
+    RABBITMQ_DEFAULT_USER: admin
+    RABBITMQ_DEFAULT_PASS: admin
+
+groovy-app:
+  build: groovy_app
+  links:
+    - mq
+  ports:
+    - "8080:8080"
+  environment:
+    CLOUDAMQP_URL: "amqp://admin:admin@mq:5672"
+
+node-app:
+  build: node_app
+  links:
+    - mq
+  ports:
+    - "3000:3000"
+  environment:
+    CLOUDAMQP_URL: "amqp://admin:admin@mq:5672"
+    SLEEP: "30" 
